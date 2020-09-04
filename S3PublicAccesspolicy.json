@@ -1,0 +1,15 @@
+{
+  "Id": "Policy1599189267252",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1599188383512",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::satyanarayanagokavarapu/*",
+      "Principal": "*"
+    }
+  ]
+}
