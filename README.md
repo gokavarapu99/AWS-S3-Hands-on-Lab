@@ -65,3 +65,55 @@ You should get a warning notification prompting you that any object in your buck
 
 Let's go back into the bucket and upload another file. Select the bucket name, click on Upload, rename the old file to fountain-new.jpg, and upload it. Now click on fountain-new.jpg and then click on the public link. You should see the beautiful fountain picture again!
 
+
+
+#Creating a Basic Amazon S3 Lifecycle Policy
+
+
+
+
+Introduction
+AWS Glacier is a long-term archive storage service that provides lower-cost storage than other AWS storage options. When data has not been accessed for a certain period of time, it can be moved automatically between S3 storage classes using a lifecycle policy. In this lab, we will create a basic Amazon S3 lifecycle policy.
+
+Solution
+Log in to the AWS Management Console using the credentials provided on the lab instructions page. Make sure you're using the us-east-1 region.
+
+Feel free to download the pinehead.jpg file if you'd like to upload it to the folder we'll create.
+
+Create an S3 Bucket and Upload an Object
+Navigate to S3.
+Click Create bucket.
+For Bucket name, type "lalifecycle". (Since bucket names must be globally unique, add a series of random numbers at the end.)
+Un-check Block all public access.
+Check to acknowledge that the current settings might result in the bucket and the objects within it becoming public.
+Click Create bucket.
+Click the name of the bucket to open it, and then click + Create folder.
+Name the folder "MyProject", and click Save.
+Open the folder, and click Upload.
+Upload any file you'd like (which could be the pinehead.jpg file if you downloaded that from GitHub).
+Click Next.
+Under Manage public permissions, select Grant public read access to this object(s).
+Click Next > Next > Upload.
+Create a Lifecycle Policy
+Click the bucket name at the top of the page.
+Select the Management tab.
+Click + Add lifecycle rule.
+Name the rule "s3toGlacier".
+Under Choose a rule scope, select Apply to all objects in the bucket.
+Click Next.
+On the Storage class transition screen, check the boxes next to Current version and Previous versions.
+Next to For current versions of objects, click + Add transition, and set the following values:
+Object creation: Transition to Glacier after
+Days after creation: 30 days
+Check to acknowledge that this lifecycle rule will increase the one-time lifecycle request cost if it transitions small objects.
+Next to For previous versions of objects, click + Add transition, and set the following values:
+Object becomes a previous version: Transition to Glacier Deep Archive after
+Days after objects become noncurrent: 15 days
+Check to acknowledge that this lifecycle rule will increase the one-time lifecycle request cost if it transitions small objects.
+Click Next.
+On the Configure expiration screen, check Previous versions.
+With Permanently delete previous versions checked, type "365" in to indicate they should delete after 365 days from becoming a previous version.
+Click Next.
+Check the box to acknowledge the lifecycle rule will apply to all objects in the bucket.
+Click Save.
+
