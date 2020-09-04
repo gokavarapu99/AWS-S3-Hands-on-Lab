@@ -65,4 +65,3 @@ You should get a warning notification prompting you that any object in your buck
 
 Let's go back into the bucket and upload another file. Select the bucket name, click on Upload, rename the old file to fountain-new.jpg, and upload it. Now click on fountain-new.jpg and then click on the public link. You should see the beautiful fountain picture again!
 
-Congratulations! You've completed this Learning Activity! Once both boxes have been checked off on your dashboard, you can click "Grade Activity" and move on.
