@@ -63,7 +63,7 @@ _**Note**_: Bucket names must be globally unique. This means that if an AWS s3 u
 
  > You should get a warning notification prompting you that any object in your bucket will be public.
 
-####_Let's go back into the bucket and upload another file. Select the bucket name, click on Upload, rename the old file to fountain-new.jpg, and upload it. Now click on fountain-new.jpg and then click on the public link. You should see the beautiful fountain picture again!_
+#### _Let's go back into the bucket and upload another file. Select the bucket name, click on Upload, rename the old file to fountain-new.jpg, and upload it. Now click on fountain-new.jpg and then click on the public link. You should see the beautiful fountain picture again!_
 
 
 
